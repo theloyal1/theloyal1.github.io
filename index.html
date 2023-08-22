@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Gabriel Leal (ADS-3)</title>
+    <link rel="stylesheet" href="css/dark-light.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header-pt.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <header>
+        <div class="foto"><img src="arquivos/foto.png" alt="Minha foto"></div>
+        <div class="logo"><h1>Gabriel Leal de Oliveira</h1></div>
+        <div class="linguas">
+            <button id="eng"><a href="http://127.0.0.1:5500/english.html"><img src="arquivos/imgs/eng.png" alt="Eng"></a></button>
+            <button id="port"><img src="arquivos/imgs/port.png" alt="Port"></button>
+        </div>
+    </header>
+
+    <nav class="menu" onclick="view_menu()">
+        <ul>
+            <li><a href="#intro">Introdução</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#eventos">Eventos Participados</a>
+                <ul>
+                    <li><a href="#etec">2º ETEC - Encontro Tecnológico (15/06/2023)</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="button">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+
+    <div class="menu-mobile">
+        <ul id="menu-mob">
+            <li><a href="#intro">Introdução</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#eventos">Eventos Participados</a>
+                <ul>
+                    <li><a href="#etec">2º ETEC - Encontro Tecnológico (15/06/2023)</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <label class="altera">
+        <input type="checkbox" checked id="alteraCor">
+        <div class="fundo">
+            <div class="botao"></div>
+        </div>
+    </label>
+    <script>
+        document.getElementById('alteraCor').addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+        });
+    </script>
+
+    <div class="texto">
+        <div class="introducao">
+            <div class="titulo"><h1 id="intro">Introdução</h1></div>
+            <li><h3>Data de nascimento: 15/07/2004</h3></li>
+            <li><h3>Idade: 18 anos</h3></li>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas no IFTM e cursando Manutenção e Suporte em 
+                Informática na MultiTech, ambas em Paracatu/MG, gostaria de aplicar tudo o que aprendi até agora para desenvolver a 
+                imagem da (Insira nome da empresa aqui) no mercado, e ao mesmo tempo descobrir e aprender coisas novas pela frente.</p>
+        </div>
+
+        <div class="formacao">
+            <div class="titulo"><h1 id="formacao">Formação</h1></div>
+            <div class="info-formacao">
+                <img src="arquivos/imgs/iftm-logo.png" alt="Logo IFTM" width="250px">
+                <h3>Graduação em Tecnologia em Análise e Desenvolvimento de Sistemas | Março de 2022 - Dezembro de 2024</h3>
+                <img src="arquivos/imgs/multitech-logo.png" alt="Logo Multitech" width="250px">
+                <h3>Curso técnico em Manutenção e Suporte em Informática | Junho de 2023 - Julho de 2024</h3>
+            </div>
+        </div>
+
+        <div class="skills">
+            <div class="titulo"><h1 id="skills">Habilidades</h1></div>
+            <div class="containers">
+                <div class="container">
+                    <div class="circular-progress1">
+                        <span class="progress-value1">91%</span>
+                    </div>
+                    <span class="text1">HTML</span>
+                </div>
+                <div class="container">
+                    <div class="circular-progress2">
+                        <span class="progress-value2">91%</span>
+                    </div>
+                    <span class="text2">CSS</span>
+                </div>
+                <div class="container">
+                    <div class="circular-progress3">
+                        <span class="progress-value3">15%</span>
+                    </div>
+                    <span class="text3">JavaScript</span>
+                </div>
+                <div class="container">
+                    <div class="circular-progress4">
+                        <span class="progress-value4">75%</span>
+                    </div>
+                    <span class="text4">C</span>
+                </div>
+                <div class="container">
+                    <div class="circular-progress5">
+                        <span class="progress-value5">60%</span>
+                    </div>
+                    <span class="text5">Java</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="eventos">
+            <div class="titulo"><h1 id="eventos">Eventos Participados</h1></div>
+            <div class="subtitulo"><h2 id="etec">2º ETEC - Encontro Tecnológico</h2></div>
+            <li>Data: 15/06/2023</li>
+            <li>Local: IFTM - Campus Paracatu (Polo João Pinheiro)</li>
+            <div class="container-slider">
+                <button id="prev-button"><img src="arquivos/imgs/seta-esquerda.png" alt="Prev"></button>
+                <div class="container-images">
+                    <img src="arquivos/etec/foto-1.png" alt="Slide 1" class="slider on">
+                    <img src="arquivos/etec/foto-2.png" alt="Slide 2" class="slider">
+                    <img src="arquivos/etec/foto-3.png" alt="Slide 3" class="slider">
+                    <img src="arquivos/etec/foto-4.png" alt="Slide 4" class="slider">
+                    <img src="arquivos/etec/foto-5.png" alt="Slide 5" class="slider">
+                    <img src="arquivos/etec/foto-6.png" alt="Slide 6" class="slider">
+                    <img src="arquivos/etec/foto-7.png" alt="Slide 7" class="slider">
+                    <img src="arquivos/etec/foto-8.png" alt="Slide 8" class="slider">
+                    <img src="arquivos/etec/foto-9.png" alt="Slide 9" class="slider">
+                </div>
+                <button id="next-button"><img src="arquivos/imgs/seta-direita.png" alt="Next"></button>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="contato">Contato: (38)99801-1608</div>
+        <div class="email">Email: gabriel.leal.oliveira2004@gmail.com</div>
+        <div class="redes">
+            <a target="_blank" href="https://www.instagram.com/gabriellealdeoliveira/"><img src="arquivos/imgs/icone-instagram.png" alt="Instagram"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/gabriel-leal-de-oliveira-411b2a24a/"><img src="arquivos/imgs/icone-linkedin.png" 
+                alt="LinkedIn"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

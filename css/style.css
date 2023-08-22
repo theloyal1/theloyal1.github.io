@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik Marker Hatch', cursive;
+    margin: 0;
+    padding: 0;
+    background: rgb(226,236,235);
+    /*background: linear-gradient(0deg, rgba(226,236,235,1) 0%, rgba(135,206,235,1) 100%);*/
+    transition: background 0.5s;
+    color: #272838;
+}
+
+body.dark {
+    background: rgb(27,30,35);
+    /*background: linear-gradient(0deg, rgba(25,25,112,1) 0%, rgba(27,30,35,1) 100%);*/
+    color: #F6F8FF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+label {
+    cursor: default;
+}
+
+.texto {
+    padding: 0 5%;
+}
+
+.titulo {
+    color: #2CFA1F;
+    text-align: center;
+}
+
+.subtitulo {
+    text-align: center;
+}
+
+.texto li {
+    text-align: center;
+    list-style-type: none;
+}
+
+.introducao {
+    visibility: hidden;
+}
+
+.formacao {
+    visibility: hidden;
+}
+
+.texto .info-formacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.texto .info-formacao img {
+    box-shadow: 6px 6px 3px rgb(27,30,35);
+}
+
+.eventos {
+    visibility: hidden;
+}
+
+@keyframes animacao {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}

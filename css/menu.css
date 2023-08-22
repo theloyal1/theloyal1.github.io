@@ -1,0 +1,135 @@
+.menu {
+    background-color: #40108A;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #40108A;
+}
+
+.menu ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu ul li a {
+    color: #31A072;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #2CFA1F;
+}
+
+.menu ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+}
+
+.menu ul li:hover ul {
+    display: block;
+}
+
+.menu ul ul li {
+    display: inline;
+}
+
+.menu ul ul li a {
+    display: block;
+}
+
+.menu-mobile ul {
+    display: none;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #40108A;
+}
+
+.menu-mobile ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-mobile ul li a {
+    color: #31A072;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.menu-mobile ul li a:hover {
+    color: #2CFA1F;
+}
+
+.menu-mobile ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+}
+
+.menu-mobile ul li:hover ul {
+    display: block;
+}
+
+.menu-mobile ul ul li {
+    display: inline;
+}
+
+.menu-mobile ul ul li a {
+    display: block;
+}
+
+.menu .button {
+    margin: 0;
+    height: 42px;
+    width: 42px;
+    top: 5%;
+    left: 5%;
+    padding: 0;
+    background-color: transparent;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu .button li {
+    width: 100%;
+    height: 5px;
+    background: #31A072;
+    border-radius: 2px;
+    transition: background 0.3s;
+}
+
+.menu .button:hover li {
+    background: #2CFA1F;
+}
+
+@media screen and (max-width: 600px){
+    .menu ul {
+        display: none;
+    }
+
+    .menu .button {
+        display: flex;
+    }
+
+    .menu-mobile ul {
+        display: none;
+    }
+}

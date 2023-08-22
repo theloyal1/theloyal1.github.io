@@ -1,0 +1,23 @@
+footer {
+    background: linear-gradient(90deg, rgba(0,4,17,1), rgba(13,2,33,1), rgba(33,12,60,1));
+    background-size: 500% 100%;
+    color: #2CFA1F;
+    padding: 10px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animacao 7s infinite alternate;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+footer .redes {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+footer a:hover {
+    opacity: 0.1;
+    transition: 0.3s;
+}

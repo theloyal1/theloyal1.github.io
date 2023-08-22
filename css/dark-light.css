@@ -1,0 +1,48 @@
+.altera {
+    cursor: pointer;
+    height: 29px;
+    width: 52px;
+    display: block;
+    position: sticky;
+    top: 1%;
+    left: 97%;
+}
+.fundo {
+    display: block;
+    height: 29px;
+    width: 52px;
+    background-color: rgb(25,25,112);
+    border-radius: 80px;
+    padding: 1%;
+    transition: background 0.5s;
+    overflow: hidden;
+    top: 10%;
+    left: 97%;
+    margin-right: 15px;
+}
+.altera input[type='checkbox']:checked + .fundo{
+    background-color: rgb(135,206,235);
+}
+.botao {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: relative;
+    transition: left 0.5s;
+    transform: rotate(180deg);
+    top: 5px;
+    z-index: 2;
+}
+.altera input[type='checkbox'] {
+    display: none;
+}
+.altera input[type='checkbox']:checked + .fundo .botao {
+    position: absolute;
+    left: 6px;
+    background-color: #000;
+}
+.altera input[type='checkbox']:not(:checked) + .fundo .botao  {
+    background-color: #fff;
+    left: 28px;
+    position: absolute;
+}

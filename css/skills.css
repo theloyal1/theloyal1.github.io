@@ -191,6 +191,40 @@
     font-weight: 500;
 }
 
+.circular-progress6 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#73A7D5 216deg, #88ACBD 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 6px 3px rgb(27,30,35);
+}
+
+.circular-progress6::before {
+    content: "";
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    background-color: #BEBBBB;
+}
+
+.progress-value6 {
+    position: relative;
+    font-size: 35px;
+    font-weight: 600;
+    color: #73A7D5;
+}
+
+.text6 {
+    color: #73A7D5;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 @media screen and (max-width: 900px){
     .containers {
         flex-direction: column;

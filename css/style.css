@@ -8,7 +8,7 @@ body {
     font-family: 'Rubik Marker Hatch', cursive;
     margin: 0;
     padding: 0;
-    background: rgb(226,236,235);
+    background: rgb(225,225,225);
     /*background: linear-gradient(0deg, rgba(226,236,235,1) 0%, rgba(135,206,235,1) 100%);*/
     transition: background 0.5s;
     color: #272838;

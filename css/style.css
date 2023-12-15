@@ -17,7 +17,7 @@ body {
 body.dark {
     background: rgb(27,30,35);
     /*background: linear-gradient(0deg, rgba(25,25,112,1) 0%, rgba(27,30,35,1) 100%);*/
-    color: #F6F8FF;
+    color: #E1E1E1;
 }
 
 html {

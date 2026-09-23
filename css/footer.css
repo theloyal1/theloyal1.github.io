@@ -6,16 +6,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    gap: 20rem;
 }
 
 footer .redes {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     gap: 2rem;
 }
-
 footer a:hover {
     opacity: 0.1;
     transition: 0.3s;

@@ -59,3 +59,8 @@ label {
 .texto .info-formacao img {
     box-shadow: 6px 6px 3px rgb(27,30,35);
 }
+
+.contatos {
+    background-color: #444545;
+    color: #e9f1f8;
+}

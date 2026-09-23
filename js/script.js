@@ -1,16 +1,3 @@
-window.sr = ScrollReveal({ reset: true });
-
-sr.reveal('header .foto', {duration: 2000});
-sr.reveal('header .logo', {duration: 2000});
-sr.reveal('header .linguas', {duration: 2000})
-sr.reveal('.introducao', {duration: 2000});
-sr.reveal('.formacao', {duration: 2000});
-sr.reveal('.skills', {duration: 2000});
-sr.reveal('.eventos', {duration: 2000});
-sr.reveal('.contato', {duration: 2000});
-sr.reveal('.email', {duration: 2000});
-sr.reveal('.redes', {duration: 2000});
-
 //Menu responsivo
 const btnMobile = document.querySelector('.menu .button');
 

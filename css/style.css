@@ -9,14 +9,12 @@ body {
     margin: 0;
     padding: 0;
     background: rgb(225,225,225);
-    /*background: linear-gradient(0deg, rgba(226,236,235,1) 0%, rgba(135,206,235,1) 100%);*/
     transition: background 0.5s;
     color: #272838;
 }
 
 body.dark {
     background: rgb(27,30,35);
-    /*background: linear-gradient(0deg, rgba(25,25,112,1) 0%, rgba(27,30,35,1) 100%);*/
     color: #E1E1E1;
 }
 
@@ -33,7 +31,7 @@ label {
 }
 
 .titulo {
-    color: #2CFA1F;
+    color: #d7263d;
     text-align: center;
 }
 
@@ -46,14 +44,6 @@ label {
     list-style-type: none;
 }
 
-.introducao {
-    visibility: hidden;
-}
-
-.formacao {
-    visibility: hidden;
-}
-
 .texto .info-formacao {
     display: flex;
     align-items: center;
@@ -64,17 +54,4 @@ label {
 
 .texto .info-formacao img {
     box-shadow: 6px 6px 3px rgb(27,30,35);
-}
-
-.eventos {
-    visibility: hidden;
-}
-
-@keyframes animacao {
-    0%{
-        background-position-x: 0%;
-    }
-    100%{
-        background-position-x: 100%;
-    }
 }

@@ -26,7 +26,7 @@
 }
 
 .menu ul li a:hover {
-    color: #9B1D20;
+    color: #F4000C;
 }
 
 .menu ul ul {
@@ -72,7 +72,7 @@
 }
 
 .menu-mobile ul li a:hover {
-    color: #9B1D20;
+    color: #F4000C;
 }
 
 .menu-mobile ul ul {
@@ -117,7 +117,7 @@
 }
 
 .menu .button:hover li {
-    background: #9B1D20;
+    background: #F4000C;
 }
 
 @media screen and (max-width: 600px){

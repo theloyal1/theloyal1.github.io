@@ -1,5 +1,5 @@
 .menu {
-    background-color: #444545;
+    /* background-color: #444545; */
 }
 
 .menu ul {
@@ -47,7 +47,7 @@
     display: block;
 }
 
-.menu-mobile ul {
+/* .menu-mobile ul {
     display: none;
     align-items: flex-start;
     justify-content: space-around;
@@ -91,7 +91,7 @@
 
 .menu-mobile ul ul li a {
     display: block;
-}
+} */
 
 .menu .button {
     margin: 0;
@@ -125,11 +125,98 @@
         display: none;
     }
 
-    .menu .button {
+    /* .menu .button {
         display: flex;
-    }
+    } */
 
     .menu-mobile ul {
         display: none;
     }
+}
+
+:root {
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height)*3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    background: #444545;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+    border: 1px solid #d7263d;
+    box-shadow: 0 0 0 1px #444545;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: #d7263d;
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing), 
+        rotate var(--animation-timing), translate var(--animation-timing), 
+        background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding-top: 1.5rem;
+    background-color: #444545;
+    color: #d7263d;
+    max-width: 10rem;
+    min-height: 100vh;
+}
+
+.sidebar nav li a {
+    color: #d7263d;
+}
+
+.sidebar nav li:hover a {
+    color: #F4000C;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+    translate: 0;
 }

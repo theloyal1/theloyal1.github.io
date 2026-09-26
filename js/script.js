@@ -1,13 +1,3 @@
-//Menu responsivo
-const btnMobile = document.querySelector('.menu .button');
-
-function toggleMenu() {
-    const nav = document.querySelector('.menu');
-    nav.classList.toggle('active');
-}
-
-btnMobile.addEventListener('click', toggleMenu);
-
 //Slider
 const slider = document.querySelectorAll('.slider');
 const btnPrev = document.getElementById('prev-button');
@@ -47,20 +37,3 @@ function prevSlider() {
 
 btnNext.addEventListener('click', nextSlider)
 btnPrev.addEventListener('click', prevSlider)
-let ativo = true
-
-function view_menu(){
-    let menu_mobile = document.getElementById("menu-mob")
-
-    if(!ativo){
-        menu_mobile.style.display = "none"
-        ativo = !ativo
-    } else {
-        menu_mobile.style.display = "flex"
-        ativo = !ativo
-    }
-
-    console.log(ativo)
-
-
-}

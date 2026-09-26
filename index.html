@@ -37,13 +37,25 @@
             </li>
             <li><a href="#contatos">Contatos</a></li>
         </ul>
-        <ul class="button" onclick="view_menu()">
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <label class="hamburger-menu">
+            <input type="checkbox">
+        </label>
+        <aside class="sidebar">
+            <nav>
+                <li><a href="#intro">Introdução</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a>
+                    <ul>
+                        <li><a href="#etec">2º ETEC - Encontro Tecnológico (15/06/2023)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contatos">Contatos</a></li>
+            </nav>
+        </aside>
     </nav>
 
+    <!--
     <div class="menu-mobile">
         <ul id="menu-mob">
             <li><a href="#intro">Introdução</a></li>
@@ -56,7 +68,7 @@
             </li>
             <li><a href="#contatos">Contatos</a></li>
         </ul>
-    </div>
+    </div> -->
 
     <label class="altera">
         <input type="checkbox" checked id="alteraCor">
@@ -127,8 +139,8 @@
             </div>
         </div>
 
-        <div class="eventos">
-            <div class="titulo"><h1 id="eventos">Eventos Participados</h1></div>
+        <div class="projetos">
+            <div class="titulo"><h1 id="projetos">Projetos</h1></div>
             <div class="subtitulo"><h2 id="etec">2º ETEC - Encontro Tecnológico</h2></div>
             <li>Data: 15/06/2023</li>
             <li>Local: IFTM - Campus Paracatu (Polo João Pinheiro)</li>

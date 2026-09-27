@@ -120,19 +120,6 @@
     background: #F4000C;
 }
 
-@media screen and (max-width: 750px){
-    .menu ul {
-        display: none;
-    }
-
-    /* .menu .button {
-        display: flex;
-    } */
-
-    .menu-mobile ul {
-        display: none;
-    }
-}
 
 :root {
     --bar-width: 60px;
@@ -147,7 +134,7 @@
     position: fixed;
     top: 20px;
     left: 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: var(--hamburger-gap);
     width: var(--bar-width);
@@ -245,3 +232,16 @@
 .hamburger-menu:has(input:checked) + .sidebar {
     translate: 0;
 }
+    @media screen and (max-width: 750px){
+        .menu ul {
+            display: none;
+        }
+    
+        .hamburger-menu {
+            display: flex;
+        }
+
+        .sidebar {
+            display: block;
+        }
+    }

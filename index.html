@@ -16,56 +16,43 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav-container">
-            <label class="hamburger-menu">
-                <input type="checkbox" id="menu-toggle">
-            </label>
-            <aside class="sidebar">
-                <nav>
-                    <li><a href="#about">Sobre Mim</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#formacao">Formação</a></li>
-                    <li><a href="#experiencia">Experiência</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contatos">Contatos</a></li>
-                </nav>
-            </aside>
-            <div class="logo"><a href="#"><h1>G.L.</h1></a></div>
-            <div class="links">
-                <div class="link"><a href="#about">Sobre Mim</a></div>
-                <div class="link"><a href="#experiencia">Experiência</a></div>
-                <div class="link"><a href="#projetos">Projetos</a></div>
-                <div class="link"><a href="#contatos">Contatos</a></div>
-            </div>
-            <label class="altera">
-                <input type="checkbox" checked id="alteraCor">
-                <div class="fundo">
-                    <div class="botao"></div>
-                </div>
-            </label>
-            <script>
-                document.getElementById('alteraCor').addEventListener('click', () => {
-                    document.body.classList.toggle('dark');
-                });
-            </script>
-        </div>
-        <!-- <label class="hamburger-menu">
-            <input type="checkbox" id="menu-toggle">
-        </label>
-        <aside class="sidebar">
-            <nav>
-                <li><a href="#about">Sobre Mim</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contatos">Contatos</a></li>
-            </nav>
-        </aside> -->
-    </nav>
-
     <header>
+        <nav>
+            <div class="nav-container">
+                <label class="hamburger-menu">
+                    <input type="checkbox" id="menu-toggle">
+                </label>
+                <aside class="sidebar">
+                    <nav>
+                        <li><a href="#about">Sobre Mim</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#formacao">Formação</a></li>
+                        <li><a href="#experiencia">Experiência</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contatos">Contatos</a></li>
+                    </nav>
+                </aside>
+                <div class="logo"><a href="#"><h1>G.L.</h1></a></div>
+                <div class="links">
+                    <div class="link"><a href="#about">Sobre Mim</a></div>
+                    <div class="link"><a href="#experiencia">Experiência</a></div>
+                    <div class="link"><a href="#projetos">Projetos</a></div>
+                    <div class="link"><a href="#contatos">Contatos</a></div>
+                </div>
+                <label class="altera">
+                    <input type="checkbox" checked id="alteraCor">
+                    <div class="fundo">
+                        <div class="botao"></div>
+                    </div>
+                </label>
+                <script>
+                    document.getElementById('alteraCor').addEventListener('click', () => {
+                        document.body.classList.toggle('dark');
+                    });
+                </script>
+            </div>
+        </nav>
+
         <div class="foto"><img src="arquivos/foto.png" alt="Gabriel Leal de Oliveira"></div>
         <div class="logo"><h1>Gabriel Leal de Oliveira</h1></div>
         <!-- <div class="linguas">

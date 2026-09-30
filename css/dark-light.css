@@ -4,8 +4,7 @@
     width: 52px;
     display: block;
     position: sticky;
-    top: 1%;
-    left: 97%;
+    left: 90%;
 }
 .fundo {
     display: block;
@@ -16,8 +15,7 @@
     padding: 1%;
     transition: background 0.5s;
     overflow: hidden;
-    top: 10%;
-    left: 97%;
+    left: 90%;
     margin-right: 15px;
 }
 .altera input[type='checkbox']:checked + .fundo{

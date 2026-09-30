@@ -11,7 +11,7 @@
 .hamburger-menu {
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
     position: fixed;
-    top: 1%;
+    top: 2%;
     left: 1%;
     display: none;
     flex-direction: column;
@@ -73,7 +73,7 @@
     transition: translate 200ms ease-in-out;
     translate: -100%;
     padding-top: 80px;
-    background-color: #444545;
+    background-color: #0c0910;
     color: #d7263d;
     position: fixed;
     top: 0;
@@ -178,11 +178,32 @@ nav {
 
 @media screen and (max-width: 980px){
     .nav-container {
-        display: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 8px;
+        box-sizing: border-box;
     }
 
     .hamburger-menu {
         display: flex;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .nav-container .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-container .logo h1 {
+        margin: 0;
+    }
+
+    .altera {
+        margin-left: auto;
     }
 
     .sidebar {

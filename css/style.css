@@ -27,7 +27,7 @@ label {
     cursor: default;
 }
 
-.texto {
+section {
     padding: 0 5%;
 }
 
@@ -43,12 +43,12 @@ label {
     text-align: center;
 }
 
-.texto li {
+section li {
     text-align: center;
     list-style-type: none;
 }
 
-.texto .info-formacao {
+section .info-formacao {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,7 +56,7 @@ label {
     flex-direction: column;
 }
 
-.texto .info-formacao img {
+section .info-formacao img {
     box-shadow: 6px 6px 3px rgb(27,30,35);
 }
 

@@ -6,19 +6,36 @@
 
 header {
     background: #0c0910;
-    background-size: 500% 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 15px 0;
+    padding: 30px 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header .foto {
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 500px;
-    height: 80vh;
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
+header .foto img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    max-height: 70vh;
+    height: auto;
+    object-fit: contain;
 }
 
 header .logo {
@@ -30,6 +47,7 @@ header .logo {
     color: #e9f1f8;
     position: relative;
     text-align: center;
+    /* text-shadow: 0 0 5px #F4000C, 0 0 10px #F4000C, 0 0 15px #F4000C, 0 0 20px #F4000C, 0 0 25px #F4000C; */
 }
 
 header .main-container {
@@ -37,28 +55,48 @@ header .main-container {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: clamp(1rem, 4vw, 3rem);
+    width: 100%;
+    margin: 0 auto;
 }
 
 header .main-container .logo {
     font-size: 3rem;
 }
 
+/* Tablets e celulares */
 @media screen and (max-width: 980px) {
     header .main-container {
         flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    header .main-container .logo {
+        font-size: 2rem;
+    }
+
+    header .foto {
+        width: 100%;
+        max-width: 300px;
+        max-height: 45vh;
+    }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 550px) {
+    header .main-container {
         gap: 1rem;
+    }
+
+    header .foto img {
+        max-width: 240px;
     }
 
     header .main-container .logo {
         font-size: 1.5rem;
     }
-
-    header .foto {
-        width: 300px;
-        height: 50vh;
-    }
 }
+
  /*
 header .linguas {
     display: flex;

@@ -47,7 +47,6 @@ header .logo {
     color: #e9f1f8;
     position: relative;
     text-align: center;
-    /* text-shadow: 0 0 5px #F4000C, 0 0 10px #F4000C, 0 0 15px #F4000C, 0 0 20px #F4000C, 0 0 25px #F4000C; */
 }
 
 header .main-container {
@@ -60,8 +59,33 @@ header .main-container {
     margin: 0 auto;
 }
 
-header .main-container .logo {
+header .main-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+header .main-container div .logo {
     font-size: 3rem;
+}
+
+header .main-container div .redes {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+header .main-container div .redes a img {
+    width: 40px;
+    height: 40px;
+}
+
+header .main-container div .redes a:hover {
+    scale: 1.3;
+    opacity: 0.6;
+    transition: 0.3s;
 }
 
 /* Tablets e celulares */

@@ -1,232 +1,66 @@
-.skills {
-    visibility: none;
+.field-container {
+    padding: 1.5rem;
+    flex: 1;
+    border-radius: 2rem;
+    border: 0.1rem solid #d7263d;
+    text-align: center;
+    margin: 1rem;
+    transition: 0.2s;
+    box-shadow: 6px 6px 3px rgb(27,30,35);
 }
 
-.containers {
+.field-group {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 
-.container {
-    margin: 0;
-    padding: 50px 0;
-    height: 300px;
-    width: 300px;
+.field-container:hover {
+    opacity: 0.8;
+}
+
+.field-skills {
+    display: flex;
+    text-align: initial;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+.skill {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    row-gap: 30px;
+    background: #c0c0c0;
     flex-direction: column;
+    /* width: 200px;
+    height: 150px; */
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 0.1rem solid #d7263d;
+    transition: 0.3s ease;
 }
 
-.circular-progress1 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: conic-gradient(#FF4112 327.6deg, #88ACBD 0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 6px 6px 3px rgb(27,30,35);
+.skill:hover {
+    background: #BB7676;
+    color: #d7263d;
 }
 
-.circular-progress1::before {
-    content: "";
-    position: absolute;
-    height: 110px;
-    width: 110px;
-    border-radius: 50%;
-    background-color: #BEBBBB;
+.skill h4 {
+    color: #d7263d;
+    font-size: 1.5rem;
 }
 
-.progress-value1 {
-    position: relative;
-    font-size: 35px;
-    font-weight: 600;
-    color: #FF4112;
-}
-
-.text1 {
-    color: #FF4112;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.circular-progress2 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: conic-gradient(#1B3BB1 327.6deg, #88ACBD 0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 6px 6px 3px rgb(27,30,35);
-}
-
-.circular-progress2::before {
-    content: "";
-    position: absolute;
-    height: 110px;
-    width: 110px;
-    border-radius: 50%;
-    background-color: #BEBBBB;
-}
-
-.progress-value2 {
-    position: relative;
-    font-size: 35px;
-    font-weight: 600;
-    color: #1B3BB1;
-}
-
-.text2 {
-    color: #1B3BB1;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.circular-progress3 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: conic-gradient(#E9B21C 54deg, #88ACBD 0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 6px 6px 3px rgb(27,30,35);
-}
-
-.circular-progress3::before {
-    content: "";
-    position: absolute;
-    height: 110px;
-    width: 110px;
-    border-radius: 50%;
-    background-color: #BEBBBB;
-}
-
-.progress-value3 {
-    position: relative;
-    font-size: 35px;
-    font-weight: 600;
-    color: #E9B21C;
-}
-
-.text3 {
-    color: #E9B21C;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.circular-progress4 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: conic-gradient(#2C2D71 270deg, #88ACBD 0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 6px 6px 3px rgb(27,30,35);
-}
-
-.circular-progress4::before {
-    content: "";
-    position: absolute;
-    height: 110px;
-    width: 110px;
-    border-radius: 50%;
-    background-color: #BEBBBB;
-}
-
-.progress-value4 {
-    position: relative;
-    font-size: 35px;
-    font-weight: 600;
-    color: #2C2D71;
-}
-
-.text4 {
-    color: #2C2D71;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.circular-progress5 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: conic-gradient(#E8341C 216deg, #88ACBD 0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 6px 6px 3px rgb(27,30,35);
-}
-
-.circular-progress5::before {
-    content: "";
-    position: absolute;
-    height: 110px;
-    width: 110px;
-    border-radius: 50%;
-    background-color: #BEBBBB;
-}
-
-.progress-value5 {
-    position: relative;
-    font-size: 35px;
-    font-weight: 600;
-    color: #E8341C;
-}
-
-.text5 {
-    color: #E8341C;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.circular-progress6 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: conic-gradient(#5693C7 54deg, #88ACBD 0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 6px 6px 3px rgb(27,30,35);
-}
-
-.circular-progress6::before {
-    content: "";
-    position: absolute;
-    height: 110px;
-    width: 110px;
-    border-radius: 50%;
-    background-color: #BEBBBB;
-}
-
-.progress-value6 {
-    position: relative;
-    font-size: 35px;
-    font-weight: 600;
-    color: #5693C7;
-}
-
-.text6 {
-    color: #5693C7;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-@media screen and (max-width: 1100px){
-    .containers {
+@media screen and (max-width: 560px){
+    .field-group {
         flex-direction: column;
+    }
+
+    .field-skills {
+        flex-direction: column;
+        gap: 1rem;
     }
 }

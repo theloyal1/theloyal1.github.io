@@ -1,0 +1,30 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: #c0c0c0;
+}
+
+.about-img img {
+    width: 25vw;
+    border: 2px solid #d7263d;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #d7263d;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.about-img img:hover {
+    box-shadow: 0 0 25px #d7263d, 0 0 35px #d7263d, 0 0 45px #d7263d;
+}
+
+.about-content {
+    padding: 0 4rem;
+    text-align: justify;
+}
+
+.about-content .titulo {
+    text-align: left;
+    line-height: 1.2;
+}

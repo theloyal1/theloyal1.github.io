@@ -2,11 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem 5%;
     gap: 2rem;
 }
 
 .about-img img {
     width: 20vw;
+    height: 20vw;
     border: 2px solid #d7263d;
     border-radius: 50%;
     box-shadow: 0 0 25px #d7263d;
@@ -19,11 +21,29 @@
 }
 
 .about-content {
-    padding: 0 4rem;
     text-align: justify;
 }
 
 .about-content .titulo {
     text-align: left;
     line-height: 1.2;
+}
+
+@media screen and (max-width: 800px) {
+    .about {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about-img img {
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about-img img {
+        width: 60vw;
+        height: 60vw;
+    }
 }

@@ -89,7 +89,7 @@ section li {
     font-weight: bold;
 }
 
-/* .btn {
+.btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background: #d7263d;
@@ -106,7 +106,7 @@ section li {
 .btn:hover {
     box-shadow: 0 0 20px #d7263d;
     transform: translateY(-3px);
-} */
+}
 
 @media screen and (max-width: 960px) {
     .formacao-container {

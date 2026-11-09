@@ -112,3 +112,9 @@ section li {
     background-color: #444545;
     color: #e9f1f8;
 }
+
+@media screen and (max-width: 700px) {
+    .formacao-container {
+        flex-direction: column;
+    }
+}

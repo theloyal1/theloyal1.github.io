@@ -2,6 +2,11 @@
     background: #c0c0c0;
     margin: 0;
     padding: 2rem 0;
+    transition: background 0.5s;
+}
+
+body.dark .contatos {
+    background: #444545;
 }
 
 body.dark .contatos .titulo h1 {

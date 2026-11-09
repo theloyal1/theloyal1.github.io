@@ -108,11 +108,6 @@ section li {
     transform: translateY(-3px);
 } */
 
-.contatos {
-    background-color: #444545;
-    color: #e9f1f8;
-}
-
 @media screen and (max-width: 960px) {
     .formacao-container {
         flex-direction: column;

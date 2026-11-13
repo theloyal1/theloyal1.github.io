@@ -220,18 +220,21 @@
     </section>
     <section class="contatos" id="contatos">
         <div class="titulo"><h1>Contatos</h1></div>
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="0462ea93-5ebe-4dc1-929a-33748c7789d0">
+        <form action="https://formsubmit.co/gabriel.leal.oliveira2004@gmail.com" method="POST">
+            <input type="hidden" name="access_key" value="e8096092-f167-4602-8d08-9c09fed23c62">
+            <input type="hidden" name="subject" value="Nova mensagem pelo portfólio!">
+            <input type="hidden" name="from_name" value="Portfólio - Gabriel Leal de Oliveira">
             <div class="input-box">
-                <input type="text" placeholder="Nome completo">
-                <input type="email" name="Email" placeholder="Email">
+                <input type="text" name="nome" placeholder="Nome completo" required>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
             <div class="input-box">
-                <input type="tel" placeholder="Telefone">
-                <input type="text" placeholder="Assunto">
+                <input type="tel" name="telefone" placeholder="Telefone" required>
+                <input type="text" name="assunto" placeholder="Assunto" required>
             </div>
-            <textarea name="Mensagem" placeholder="Sua mensagem" id="" cols="30" rows="10"></textarea>
+            <textarea name="mensagem" placeholder="Sua mensagem" id="" cols="30" rows="10" required></textarea>
             <input type="submit" value="Enviar mensagem" class="btn">
+            <p id="resultado-envio"></p>
         </form>
     </section>
     <footer>

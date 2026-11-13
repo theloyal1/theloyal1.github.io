@@ -20,28 +20,48 @@ document.addEventListener("click", (event) => {
 
 // Enviar mensagem
 const form = document.querySelector("form");
+const resultado = document.getElementById("resultado-envio");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const formData = new FormData(form);
-    
-    fetch(form.action, {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert("Mensagem enviada com sucesso!");
+    resultado.textContent = "Enviando mensagem...";
+
+    const dados = Object.fromEntries(new FormData(form).entries());
+
+    try {
+        const resposta = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(dados)
+        });
+
+        const texto = await resposta.text();
+
+        console.log("Status HTTP:", resposta.status);
+        console.log("Resposta original:", texto);
+
+        let respostaJson;
+
+        try {
+            respostaJson = JSON.parse(texto);
+        } catch {
+            throw new Error("Resposta não é um JSON válido");
+        }
+
+        if(resposta.ok && respostaJson.success) {
+            resultado.textContent = "Mensagem enviada com sucesso!";
             form.reset();
         } else {
-            alert("Erro ao enviar mensagem. Por favor, tente novamente.");
+            resultado.textContent = "Erro ao enviar mensagem. Por favor, tente novamente.";
+            console.error("Erro na resposta:", respostaJson);
         }
-    })
-    .catch(error => {
+    } catch (error) {
         console.error("Error:", error);
-        alert("Erro ao enviar mensagem. Por favor, tente novamente.");
-    });
+        resultado.textContent = "Erro ao enviar mensagem. Por favor, tente novamente.";
+    }
 });
 
 //Slider

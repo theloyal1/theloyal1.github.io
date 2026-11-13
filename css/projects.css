@@ -37,7 +37,8 @@
     color: #d7263d;
     font-size: 12px;
     margin-top: 20px;
-    display: inline-block;
+    display: block;
+    width: fit-content;
     transition: 0.2s linear;
 }
 

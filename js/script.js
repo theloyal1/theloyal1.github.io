@@ -1,3 +1,4 @@
+// Hamburger Menu
 const menuToggle = document.getElementById("menu-toggle");
 const sidebar = document.querySelector(".sidebar");
 const hamburger = document.querySelector(".hamburger-menu");
@@ -17,8 +18,34 @@ document.addEventListener("click", (event) => {
     }
 });
 
+// Enviar mensagem
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("Mensagem enviada com sucesso!");
+            form.reset();
+        } else {
+            alert("Erro ao enviar mensagem. Por favor, tente novamente.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Erro ao enviar mensagem. Por favor, tente novamente.");
+    });
+});
+
 //Slider
-const slider = document.querySelectorAll('.slider');
+/* const slider = document.querySelectorAll('.slider');
 const btnPrev = document.getElementById('prev-button');
 const btnNext = document.getElementById('next-button');
 
@@ -55,4 +82,4 @@ function prevSlider() {
 }
 
 btnNext.addEventListener('click', nextSlider)
-btnPrev.addEventListener('click', prevSlider)
+btnPrev.addEventListener('click', prevSlider) */

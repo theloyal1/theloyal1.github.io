@@ -9,10 +9,6 @@ body.dark .contatos {
     background: #444545;
 }
 
-body.dark .contatos .titulo h1 {
-    text-shadow: none;
-}
-
 .contatos form {
     width: 100%;
     max-width: 65rem;

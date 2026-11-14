@@ -18,6 +18,110 @@ document.addEventListener("click", (event) => {
     }
 });
 
+// Modal
+const etecLink = document.getElementById("etec-link");
+const etecModal = document.getElementById("etec-modal");
+const closeModal = document.getElementById("close-modal");
+
+const modalImage = document.getElementById("modal-image");
+const imageCaption = document.getElementById("image-caption");
+const imageCounter = document.getElementById("image-counter");
+
+const prevImage = document.getElementById("prev-image");
+const nextImage = document.getElementById("next-image");
+
+const etecImages = [
+    {
+        src: "arquivos/etec/foto-1.png",
+        caption: "Organizadores e participantes"
+    }, {
+        src: "arquivos/etec/foto-2.png",
+        caption: "Fliperama retrô"
+    }, {
+        src: "arquivos/etec/foto-3.png",
+        caption: "Fliperama retrô"
+    }, {
+        src: "arquivos/etec/foto-4.png",
+        caption: "Caixa de areia com realidade aumentada"
+    }, {
+        src: "arquivos/etec/foto-5.png",
+        caption: "Quiz"
+    }, {
+        src: "arquivos/etec/foto-6.png",
+        caption: "Demonstração de drones"
+    }, {
+        src: "arquivos/etec/foto-7.png",
+        caption: "Vulcão de papel machê"
+    }, {
+        src: "arquivos/etec/foto-8.png",
+        caption: "Constelação virtual"
+    }, {
+        src: "arquivos/etec/foto-9.png",
+        caption: "Impressões 3D"
+    }
+];
+
+let currentImage = 0;
+
+function showImage(i) {
+    modalImage.src = etecImages[i].src;
+    modalImage.alt = etecImages[i].caption;
+    imageCaption.textContent = etecImages[i].caption;
+    imageCounter.textContent = `${i+1} / ${etecImages.length}`;
+}
+
+function prevSlide() {
+    currentImage--;
+    if(currentImage < 0) {
+        currentImage = etecImages.length - 1;
+    }
+    showImage(currentImage);
+}
+
+function nextSlide() {
+    currentImage++;
+    if(currentImage >= etecImages.length) {
+        currentImage = 0;
+    }
+    showImage(currentImage);
+}
+
+etecLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    currentImage = 0;
+    showImage(currentImage);
+    etecModal.classList.add("active");
+});
+
+closeModal.addEventListener("click", () => {
+    etecModal.classList.remove("active");
+});
+
+nextImage.addEventListener("click", nextSlide);
+prevImage.addEventListener("click", prevSlide);
+
+etecModal.addEventListener("click", (e) => {
+    if(e.target === etecModal) {
+        etecModal.classList.remove("active");
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if(!etecModal.classList.contains("active")) return;
+
+    if(e.key === "Escape") {
+        etecModal.classList.remove("active");
+    }
+
+    if(e.key === "ArrowRight") {
+        nextSlide();
+    }
+
+    if(e.key === "ArrowLeft") {
+        prevSlide();
+    }
+});
+
 // Enviar mensagem
 const form = document.querySelector("form");
 const resultado = document.getElementById("resultado-envio");
@@ -63,43 +167,3 @@ form.addEventListener("submit", async (e) => {
         resultado.textContent = "Erro ao enviar mensagem. Por favor, tente novamente.";
     }
 });
-
-//Slider
-/* const slider = document.querySelectorAll('.slider');
-const btnPrev = document.getElementById('prev-button');
-const btnNext = document.getElementById('next-button');
-
-let currentSlide = 0;
-
-function hideSlider() {
-    slider.forEach(item => item.classList.remove('on'))
-}
-
-function showSlider() {
-    slider[currentSlide].classList.add('on')
-}
-
-function nextSlider() {
-    hideSlider()
-    if(currentSlide === slider.length - 1) {
-        currentSlide = 0
-    } else {
-        currentSlide++
-    }
-
-    showSlider()
-}
-
-function prevSlider() {
-    hideSlider()
-    if(currentSlide === 0) {
-        currentSlide = slider.length - 1
-    } else {
-        currentSlide--
-    }
-
-    showSlider()
-}
-
-btnNext.addEventListener('click', nextSlider)
-btnPrev.addEventListener('click', prevSlider) */
